@@ -6,6 +6,26 @@
 
 ---
 
+## 项目结构
+
+```text
+.
+├── api/                       # Hono + tRPC backend entry, middleware, routers, and API helpers
+├── contracts/                 # Shared API types and error contracts
+├── db/                        # Drizzle schema, relations, seed data, and migrations
+├── docs/                      # Project notes and supporting documentation
+├── src/
+│   ├── components/ui/         # Reusable shadcn-style UI primitives
+│   ├── features/
+│   │   └── text-to-speech/    # Wilson text-to-speech feature UI and types
+│   ├── pages/                 # Route-level pages
+│   ├── providers/             # React providers and client setup
+│   └── lib/                   # Shared frontend utilities
+└── *.config.*                 # Tooling config kept at root for Vite, TypeScript, Tailwind, Drizzle, ESLint, and Vitest
+```
+
+---
+
 ## 使用流程
 
 ```

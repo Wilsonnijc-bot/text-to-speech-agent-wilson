@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { trpc } from "@/providers/trpc";
 import ResultCard from "./ResultCard";
-import type { HistoryItem } from "@/lib/history";
+import type { HistoryItem } from "@/features/text-to-speech/types/history";
 
 interface MainStageProps {
   activeItem: HistoryItem | null;

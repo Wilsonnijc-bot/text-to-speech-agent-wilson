@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback, useEffect } from "react";
-import type { VoiceVariant } from "@/lib/history";
+import type { VoiceVariant } from "@/features/text-to-speech/types/history";
 
 interface ResultCardProps {
   originalText: string;

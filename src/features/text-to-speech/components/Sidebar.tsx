@@ -1,5 +1,5 @@
 import { trpc } from "@/providers/trpc";
-import type { HistoryItem } from "@/lib/history";
+import type { HistoryItem } from "@/features/text-to-speech/types/history";
 
 interface SidebarProps {
   collapsed: boolean;

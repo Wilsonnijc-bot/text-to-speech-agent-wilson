@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
-import Sidebar from "../components/Sidebar";
-import MainStage from "../components/MainStage";
-import type { HistoryItem } from "@/lib/history";
+import Sidebar from "@/features/text-to-speech/components/Sidebar";
+import MainStage from "@/features/text-to-speech/components/MainStage";
+import type { HistoryItem } from "@/features/text-to-speech/types/history";
 import { trpc } from "@/providers/trpc";
 
 export default function Home() {
