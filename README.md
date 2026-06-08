@@ -11,6 +11,7 @@
 ```text
 .
 ├── api/                       # Hono + tRPC backend entry, middleware, routers, and API helpers
+├── config/                    # Tooling, environment examples, platform metadata, and UI registry config
 ├── contracts/                 # Shared API types and error contracts
 ├── db/                        # Drizzle schema, relations, seed data, and migrations
 ├── docs/                      # Project notes and supporting documentation
@@ -21,8 +22,16 @@
 │   ├── pages/                 # Route-level pages
 │   ├── providers/             # React providers and client setup
 │   └── lib/                   # Shared frontend utilities
-└── *.config.*                 # Tooling config kept at root for Vite, TypeScript, Tailwind, Drizzle, ESLint, and Vitest
+├── index.html                 # Vite HTML entry
+├── package.json               # npm scripts and dependencies
+└── package-lock.json          # npm dependency lockfile
 ```
+
+---
+
+## 环境变量
+
+复制 `config/env/.env.example` 到项目根目录的 `.env`，然后填入数据库、OpenRouter 和 ElevenLabs 凭证。
 
 ---
 

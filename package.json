@@ -4,17 +4,17 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && esbuild api/boot.ts --platform=node --bundle --format=esm --outdir=dist --banner:js=\"import { createRequire } from 'module';const require = createRequire(import.meta.url);\"",
-    "lint": "eslint .",
-    "preview": "vite preview",
+    "dev": "vite --config config/vite.config.ts",
+    "build": "vite build --config config/vite.config.ts && esbuild api/boot.ts --tsconfig=config/tsconfig/tsconfig.server.json --platform=node --bundle --format=esm --outdir=dist --banner:js=\"import { createRequire } from 'module';const require = createRequire(import.meta.url);\"",
+    "lint": "eslint . --config config/eslint.config.js",
+    "preview": "vite preview --config config/vite.config.ts",
     "start": "NODE_ENV=production node dist/boot.js",
-    "check": "tsc -b",
-    "format": "prettier --write .",
-    "test": "vitest run",
-    "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
-    "db:push": "drizzle-kit push"
+    "check": "tsc -b config/tsconfig/tsconfig.json",
+    "format": "prettier --config config/prettier/.prettierrc --ignore-path config/prettier/.prettierignore --write .",
+    "test": "vitest run --config config/vitest.config.ts",
+    "db:generate": "drizzle-kit generate --config config/drizzle.config.ts",
+    "db:migrate": "drizzle-kit migrate --config config/drizzle.config.ts",
+    "db:push": "drizzle-kit push --config config/drizzle.config.ts"
   },
   "dependencies": {
     "@hono/node-server": "^1.14.3",
